@@ -1,0 +1,13 @@
+
+.pelota{
+    background-color: red;
+    border-radius: 60%;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    z-index: 2;
+}
+body{
+    background-color:black
+}
+
