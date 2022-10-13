@@ -32,9 +32,9 @@ export function toast(props) {
               </div>
               <div class="card-body">
                   <div id="contenedorLogos">
-                    <img src="../public/img/pelotaFutbolitoBanner.png" width="100px">
+                    <img src="../img/pelotaFutbolitoBanner.png" width="100px">
                     <h1>FUTBOLITO</h1>
-                    <img src="../public/img/banderPyFutbolito.png" width="100px">
+                    <img src="../img/banderPyFutbolito.png" width="100px">
                   </div>
   
                  <div class="contenedorBotonesNavPrincipal">
@@ -74,9 +74,9 @@ export function toast(props) {
           <div class="navbar-brand" id="logoNavBarSecundario" style="margin-left: 80px;">
            
           <div id="contenedorLogos">
-          <img src="../public/img/pelotaFutbolitoBanner.png" width="100px">
+          <img src="../img/pelotaFutbolitoBanner.png" width="100px">
           <h1>FUTBOLITO</h1>
-          <img src="../public/img/banderPyFutbolito.png" width="100px">
+          <img src="../img/banderPyFutbolito.png" width="100px">
         </div>
           </div>
           

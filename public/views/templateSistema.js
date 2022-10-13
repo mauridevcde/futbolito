@@ -16,9 +16,9 @@ export function contenedor_Botonera() {
         <div class="container" >
           <div class="card text-center" style="margin-top: 15%;box-shadow: 5px 5px 10px rgba(0,0,0,0.2); border-radius: 15px">
           <div id="contenedorLogos">
-                <img src="../public/img/pelotaFutbolitoBanner.png" width="100px">
+                <img src="../img/pelotaFutbolitoBanner.png" width="100px">
                 <h1>FUTBOLITO</h1>
-                <img src="../public/img/banderPyFutbolito.png" width="100px">
+                <img src="../img/banderPyFutbolito.png" width="100px">
             </div>
           <div id="contenedorBotonera" style="height: 300px;display: flex;justify-content: space-around;">
           <button id="btnEntrenadores" type="button" style="display: flex;height: 40%;width: 30%;align-content: center;align-self: center;align-items: center;"><span class="entreSpan"> <i style="font-size:50px" class="fa fa-address-book" aria-hidden="true"></i>
