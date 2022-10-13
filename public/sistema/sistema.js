@@ -186,10 +186,10 @@ function modalEquipos() {
             nombre: nombre,
             nro: nro
         }
-        console.log("🚀 ~ file: sistema.js ~ line 166 ~ nuevoEquipo", nuevoEquipo);
+       // console.log("🚀 ~ file: sistema.js ~ line 166 ~ nuevoEquipo", nuevoEquipo);
         if (validaObject(nuevoEquipo)) {
             updateEquipo(nuevoEquipo).then((res) => {
-                console.log("🚀 ~ file: sistema.js ~ line 170 ~ res", res);
+         //       console.log("🚀 ~ file: sistema.js ~ line 170 ~ res", res);
                 if (res.estado == true) {
                     Swal.fire({
                         icon: 'success',
@@ -311,8 +311,6 @@ async function modalEntrenadores() {
                 optionEquipoEntrenadors.innerHTML = equipoEntrenadorRenders
                 equipoEntrenadorRenders = ``;
 
-
-
                 btnEditarEquipo.style.display = 'grid';
                 btnNuevoEquipo.style.display = 'none';
 
@@ -350,8 +348,7 @@ async function modalEntrenadores() {
         } else {
             let entrenadorFiltrado2 = allEntrenadores.filter(entrenador => entrenador.equipo_nombre.includes(searchNroEquipoEntrenador))
 
-
-            console.log("🚀 ~ file: sistema.js ~ line 63 ~ equipoFiltrado1", entrenadorFiltrado2)
+//            console.log("🚀 ~ file: sistema.js ~ line 63 ~ equipoFiltrado1", entrenadorFiltrado2)
 
             if (entrenadorFiltrado2.length > 0) {
 
@@ -379,8 +376,6 @@ async function modalEntrenadores() {
                 equipoEntrenadorRender = ``;
 
                 document.getElementById('inpNameEquipos').value = entrenadorFiltrado2[0].equipo_nombre
-
-
 
                 btnEditarEquipo.style.display = 'grid';
                 btnNuevoEquipo.style.display = 'none';
@@ -428,11 +423,11 @@ async function modalEntrenadores() {
             }
 
             if (validaObject(nuevoEntrenador)) {
-                console.log("🚀 ~ file: sistema.js ~ line 388 ~ nuevoEntrenador", nuevoEntrenador)
-                console.log("true");
+//                console.log("🚀 ~ file: sistema.js ~ line 388 ~ nuevoEntrenador", nuevoEntrenador)
+  //              console.log("true");
 
                 post_Entrenador(nuevoEntrenador).then((res) => {
-                    console.log("🚀 ~ file: sistema.js ~ line 150 ~ res", res);
+    //                console.log("🚀 ~ file: sistema.js ~ line 150 ~ res", res);
                     if (res.status == "Entrenador creado") {
                         Swal.fire({
                             icon: 'success',
@@ -455,8 +450,8 @@ async function modalEntrenadores() {
                 })
 
             } else {
-                console.log("false  ");
-                console.log("🚀 ~ file: sistema.js ~ line 388 ~ nuevoEntrenador", nuevoEntrenador)
+   //             console.log("false  ");
+ //               console.log("🚀 ~ file: sistema.js ~ line 388 ~ nuevoEntrenador", nuevoEntrenador)
             }
         } else {
             swal.fire({
@@ -482,10 +477,10 @@ async function modalEntrenadores() {
             equipo_id: idEquipo,
             equipo_nombre: nro,
         }
-        console.log("🚀 ~ file: sistema.js ~ line 166 ~ nuevoEquipo", nuevoEquipo);
+     //   console.log("🚀 ~ file: sistema.js ~ line 166 ~ nuevoEquipo", nuevoEquipo);
         if (validaObject(nuevoEquipo)) {
             updateEntrenador(nuevoEquipo).then((res) => {
-                console.log("🚀 ~ file: sistema.js ~ line 170 ~ res", res);
+       //         console.log("🚀 ~ file: sistema.js ~ line 170 ~ res", res);
                 if (res.status == "Entrenador Actualizado") {
                     Swal.fire({
                         icon: 'success',
