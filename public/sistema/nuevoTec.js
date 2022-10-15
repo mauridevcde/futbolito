@@ -558,10 +558,17 @@ function dibujar() {
 
     })
 
-        
 
+    let btnGuardarJugadas = document.getElementById('btnGuardarJugadas');
+     btnGuardarJugadas.addEventListener('click', () => {
+    
+        console.log('Hola btnGuardarJugadas', jugadasAll);
+    }); 
 
 }
+
+
+
 
 async function saveJugada(jugadas) {
 

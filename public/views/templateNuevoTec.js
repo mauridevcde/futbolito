@@ -126,7 +126,7 @@ export async function jugadores_Jugada(props) {
               <div style="display: flex;width: 90%;height: 52%;flex-wrap: wrap;justify-content: space-around;"id='controlesComandos'>
                
               <button id="btnEquipos" type="button" style="display: flex;height: 40%;width: 30%;align-content: center;align-self: center;align-items: center;"><span class="EquiSpan2"> MODIFICAR</span></button>
-              <button id="btnEquipos" type="button" style="display: flex;height: 40%;width: 30%;align-content: center;align-self: center;align-items: center;"><span class="EquiSpan2"> GUARDAR</span></button>
+              <button id="btnGuardarJugadas" type="button" style="display: flex;height: 40%;width: 30%;align-content: center;align-self: center;align-items: center;"><span class="EquiSpan2"> GUARDAR</span></button>
               <button id="btnEquipos" type="button" style="display: flex;height: 40%;width: 30%;align-content: center;align-self: center;align-items: center;"><span class="EquiSpan2">ELIMINAR</span></button>
   
               </div>
