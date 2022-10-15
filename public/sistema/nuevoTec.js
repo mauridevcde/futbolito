@@ -570,6 +570,7 @@ function dibujar() {
 
 
 async function saveJugada(jugadas) {
+    
 
 
 }

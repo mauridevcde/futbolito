@@ -3,6 +3,7 @@ const route = express.Router();
 const controllerEquipo = require('../controller/equipo');
 const controllerEntrenador = require('../controller/entrenador');
 const controllerJugador = require('../controller/jugador');
+const controllerJugadasAll = require('../controller/jugadasAll');
 
 //Route of equipo
 route.post('/futbolito/equiposPost/', controllerEquipo.insert_equipo);

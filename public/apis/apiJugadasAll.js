@@ -5,7 +5,7 @@ export function api_get_jugadasAll() {
             redirect: 'follow'
         };
 
-        fetch("http://127.0.0.1:5050/futbolito/jugadasAll", requestOptions)
+        fetch("http://127.0.0.1:5050/futbolito/jugadasALLGet/", requestOptions)
             .then(response => response.text())
             .then(result => {
                 //let data = JSON.parse(result)
@@ -38,7 +38,7 @@ export function api_post_jugadasAll(data) {
             redirect: 'follow'
         };
 
-        fetch("http://127.0.0.1:5050/futbolito/jugadorPost", requestOptions)
+        fetch("http://127.0.0.1:5050/futbolito/jugadasAllPost", requestOptions)
             .then(response => response.text())
             .then(result => { resolve(JSON.parse(result)); })
             .catch(error => console.log('error', error));
@@ -46,7 +46,7 @@ export function api_post_jugadasAll(data) {
     return result;
 }
 
-export function api_put_jugadasAll(data) {
+export function api_delete_jugadasAll(data) {
 
     let result = new Promise((resolve, reject) => {
         var myHeaders = new Headers();
@@ -54,11 +54,7 @@ export function api_put_jugadasAll(data) {
 
         var raw = JSON.stringify({
             id: data.id,
-            nombre: data.nombre,
-            nro: data.nro,
-            titular: data.titular,
-            equipo_id: data.equipo_id,
-            equipo_nombre: data.equipo_nombre
+
         });
 
         var requestOptions = {
@@ -68,7 +64,7 @@ export function api_put_jugadasAll(data) {
             redirect: 'follow'
         };
 
-        fetch("http://127.0.0.1:5050/futbolito/jugadorUpdate", requestOptions)
+        fetch("http://127.0.0.1:5050/futbolito/jugadasAllDelete", requestOptions)
             .then(response => response.text())
             .then(result => { resolve(JSON.parse(result)); })
             .catch(error => console.log('error', error));

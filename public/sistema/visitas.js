@@ -1,8 +1,9 @@
 import { render } from '../others/renderizado.js';
 import { addNavBarFunctions } from '../others/utils.js';
-import { headerVisitas } from '../views/templateVisitas.js'
-import { navbar } from '../views/templateHome.js'
-import { cancha, headerBotonera, jugadores_Jugada } from '../views/templateCanchaPanel.js'
+import { headerVisitas } from '../views/templateVisitas.js';
+import { navbar } from '../views/templateHome.js';
+import { cancha, headerBotonera, jugadores_Jugada } from '../views/templateCanchaPanel.js';
+import { api_get_jugadasAll } from '../apis/apiJugadasAll.js';
 
 export function Visitas() {
     inicioVisitas()
@@ -24,6 +25,7 @@ async function inicioVisitas() {
     ///////////////////////// inicioVisitas
     dibujar();
     await capturar()
+    await getJugadas();
 
 }
 
@@ -199,8 +201,11 @@ function dibujar() {
 
 }
 
-async function saveJugada(jugadas) {
+async function getJugadas() {
 
+   const jugadas= await api_get_jugadasAll();
+   
+   console.log("las Jugadas", jugadas);
 
 }
 
