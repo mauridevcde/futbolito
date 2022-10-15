@@ -3,7 +3,7 @@ import { addNavBarFunctions } from '../others/utils.js';
 import { headerVisitas } from '../views/templateVisitas.js'
 import { navbar } from '../views/templateHome.js'
 import { cancha, jugadores_Jugada, headerBotonera } from '../views/templateNuevoTec.js'
-
+import { api_post_jugadasAll } from '../apis/apiJugadasAll.js';
 export function nuevoTec() {
     inicioVisitas()
 }
@@ -240,7 +240,7 @@ function dibujar() {
 
 
     btnPlay.addEventListener('click', () => {
-
+        console.log('Click en botón Play');
         if (swithDivino == 0) {
             swithDivino = 1
             swal.close()
@@ -559,10 +559,15 @@ function dibujar() {
 
 
     let btnGuardarJugadas = document.getElementById('btnGuardarJugadas');
-     btnGuardarJugadas.addEventListener('click', () => {
-    
+    btnGuardarJugadas.addEventListener('click', async() => {
+
         console.log('Hola btnGuardarJugadas', jugadasAll);
-    }); 
+        // let datosAguardad = {
+        //     nombre: document.getElementById('inpNombreLista').value,
+        //     jugadas: jugadasAll
+        // }
+        //let postJugada = await api_post_jugadasAll(datosAguardad);
+    });
 
 }
 
@@ -570,7 +575,7 @@ function dibujar() {
 
 
 async function saveJugada(jugadas) {
-    
+
 
 
 }

@@ -25,10 +25,7 @@ export function api_post_jugadasAll(data) {
 
         var raw = JSON.stringify({
             nombre: data.nombre,
-            nro: data.nro,
-            titular: data.titular,
-            equipo_id: data.equipo_id,
-            equipo_nombre: data.equipo_nombre
+            jugadas : data.jugadas
         });
 
         var requestOptions = {
