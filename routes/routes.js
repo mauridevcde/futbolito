@@ -27,6 +27,6 @@ route.put('/futbolito/jugadorDelete', controllerJugador.delete_jugador);
 route.post('/futbolito/jugadasAllPost', controllerJugadasAll.insert_jugadasAll)
 route.get('/futbolito/jugadasALLGet/', controllerJugadasAll.read_jugadasAll);
 route.put('/futbolito/jugadasAllUpdate', controllerJugadasAll.update_jugadasAll);
-route.put('/futbolito/jugadasAllDelete', controllerJugadasAll.delete_jugadasAll);
+route.put('/futbolito/jugadasAllDelete/', controllerJugadasAll.delete_jugadasAll);
 
 module.exports = route;
