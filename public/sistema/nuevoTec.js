@@ -23,7 +23,6 @@ async function inicioVisitas() {
     addNavBarFunctions();
     ///////////////////////// inicioVisitas
     dibujar();
-    await capturar()
 
 }
 
@@ -582,24 +581,7 @@ async function saveJugada(jugadas) {
  */
 
 //Pinta Jugadores al evento click
-async function capturar() {
 
-    let jugadorcitos = document.querySelectorAll(".spJugadores")
-
-    jugadorcitos.forEach(btn => {
-
-        btn.addEventListener('click', async () => {
-
-            if (btn.style.backgroundColor == "black") {
-                btn.style.background = "transparent"
-                btn.style.color = "black"
-            } else {
-                btn.style.background = "black"
-                btn.style.color = "white"
-            }
-        })
-    })
-}
 
 
 var animacionLoopGrabacion;

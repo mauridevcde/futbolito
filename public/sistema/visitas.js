@@ -13,7 +13,7 @@ async function inicioVisitas() {
     let view = {};
     view.navbar = navbar();
     view.header = await headerVisitas();
- view.jugadores_Jugada = await jugadores_Jugada();
+    view.jugadores_Jugada = await jugadores_Jugada();
 
     view.cancha = await cancha();
 

@@ -3,7 +3,6 @@ const route = express.Router();
 const controllerEquipo = require('../controller/equipo');
 const controllerEntrenador = require('../controller/entrenador');
 const controllerJugador = require('../controller/jugador');
-const controllerJugadasAll = require('../controller/jugadasAll');
 
 //Route of equipo
 route.post('/futbolito/equiposPost/', controllerEquipo.insert_equipo);
@@ -22,11 +21,5 @@ route.post('/futbolito/jugadorPost', controllerJugador.insert_jugador)
 route.get('/futbolito/jugadoresGetAll/', controllerJugador.read_all_jugadores);
 route.put('/futbolito/jugadorUpdate', controllerJugador.update_jugador);
 route.put('/futbolito/jugadorDelete', controllerJugador.delete_jugador);
-
-//Route of jugador
-route.post('/futbolito/jugadasAllPost', controllerJugadasAll.insert_jugadasAll)
-route.get('/futbolito/jugadasALLGet/', controllerJugadasAll.read_jugadasAll);
-route.put('/futbolito/jugadasAllUpdate', controllerJugadasAll.update_jugadasAll);
-route.put('/futbolito/jugadasAllDelete', controllerJugadasAll.delete_jugadasAll);
 
 module.exports = route;
