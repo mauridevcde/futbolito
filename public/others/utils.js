@@ -203,9 +203,9 @@ export function spinnerRender() {
 	let timerInterval
 
 	Swal.fire({
-		title: 'Cargando...!',
+		title: 'Cargando Jugadas, Aguarde por favor...!',
 		html:
-			'<button id="increase" class="btn " style="background-color: #FFEDB8">' +
+			'<button id="increase" class="btn " style="background-color: #3CB371">' +
 			'Esta ventana se cerrara automaticamente!',
 		timer: 180000,
 		allowOutsideClick: false,

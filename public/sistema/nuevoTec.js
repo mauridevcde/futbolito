@@ -426,92 +426,6 @@ function dibujar() {
 
         }
 
-        /* funciona descomentar
-            //    let laX = jugadas.map(element => element.x);
-            //    let laY = jugadas.map(element => element.y);
-           //     console.log('laX', laX)
-             ///   console.log('laY', laY)
-        
-                var IdAnimacion = anime({
-                    backgroundColor: "#FF0000",
-                    targets: '.pelota',
-                    translateX: laX,
-                    translateY: laY,
-                    easing: 'linear',
-                    duration: 4000
-                });
-        */ //funciona fin descomentar
-
-        //   IdAnimacion
-        /*
-            var tl = anime.timeline({
-        
-                easing: 'linear',
-                duration: 4000
-            });
-        
-            // Add children
-            console.log(tl);
-            tl
-                .add({
-                    backgroundColor: "#FF0000",
-                    targets: '.pelota',
-                    translateX: [laX[0], laX[1]],
-                    translateY: [laY[0], laY[1]],
-                    
-                })
-        
-                .add({
-                    backgroundColor: "#FF0000",
-                    targets: '.pelota2',
-                    translateX: [laX[3], laX[4]],
-                    translateY: [laY[3], laY[4]],
-                })
-        
-        **/
-        /** 
-         * codigo movimiento anterior
-         * 
-         * var IdAnimacion = anime({
-            targets: '.pelota',
-            translateX: laX,
-            translateY: laY,
-            easing: 'easeInOutQuad',
-            duration: 3000
-          });
-        
-          IdAnimacion
-         */
-
-        /*
-                //limpiar jugadas
-                context.clearRect(0, 0, canvas.width, canvas.height);
-        
-                let numeroJugadas = jugadas.length;
-                console.log(`numeroJugadas = ${numeroJugadas} y jugadas = ${jugadas}`);
-        
-                if (numeroJugadas > 0) {
-        
-                    let posini;
-        
-                    for (let i = 0; i < cantiToques; i++) {
-                        let pos = jugadas[i];
-        
-                        if (posini) {
-                            context.beginPath();
-                            context.strokeStyle = "#EC2300";
-                            context.moveTo(posini.x, posini.y);
-                            context.lineTo(pos.x, pos.y);
-                            context.stroke();
-                        }
-                        posini = pos;
-                        pointsClick.push(posini);
-        
-                    }
-                }
-        */
-
-        //Fin Play Jugada
     });
 
     let btnGrabar = document.getElementById('grabar');
@@ -559,14 +473,42 @@ function dibujar() {
 
 
     let btnGuardarJugadas = document.getElementById('btnGuardarJugadas');
-    btnGuardarJugadas.addEventListener('click', async() => {
+    btnGuardarJugadas.addEventListener('click', async () => {
 
         console.log('Hola btnGuardarJugadas', jugadasAll);
-        // let datosAguardad = {
-        //     nombre: document.getElementById('inpNombreLista').value,
-        //     jugadas: jugadasAll
-        // }
-        //let postJugada = await api_post_jugadasAll(datosAguardad);
+
+        let inserto = false
+       
+        if (jugadasAll.length >= 2 && document.getElementById('inpNombreLista').value != '') {
+
+            inserto = true
+        }
+
+        if (inserto) {
+            let datosAguardad = {
+                nombre: document.getElementById('inpNombreLista').value,
+                jugadas: jugadasAll
+            }
+            let postJugada = await api_post_jugadasAll(datosAguardad)
+            //console.log('hice un post');
+            if (postJugada) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Perfecto!',
+                    text: 'Jugada Guardada!',
+                }).then((result) => {
+                    window.location.reload();
+                })	
+            }
+
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'No hay jugadas para guardar, por favor graba una jugada',
+            })
+        }
+
     });
 
 }
