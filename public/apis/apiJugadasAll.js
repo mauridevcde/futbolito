@@ -5,7 +5,7 @@ export function api_get_jugadasAll() {
             redirect: 'follow'
         };
 
-        fetch("http://127.0.0.1:5050/futbolito/jugadasALLGet/", requestOptions)
+        fetch("http://ec2-18-216-42-40.us-east-2.compute.amazonaws.com:5050/futbolito/jugadasALLGet/", requestOptions)
             .then(response => response.text())
             .then(result => {
                 //let data = JSON.parse(result)
@@ -35,7 +35,7 @@ export function api_post_jugadasAll(data) {
             redirect: 'follow'
         };
 
-        fetch("http://127.0.0.1:5050/futbolito/jugadasAllPost", requestOptions)
+        fetch("http://ec2-18-216-42-40.us-east-2.compute.amazonaws.com:5050/futbolito/jugadasAllPost", requestOptions)
             .then(response => response.text())
             .then(result => { resolve(JSON.parse(result)); })
             .catch(error => console.log('error', error));
@@ -61,7 +61,7 @@ export function api_delete_jugadasAll(data) {
             redirect: 'follow'
         };
 
-        fetch("http://127.0.0.1:5050/futbolito/jugadasAllDelete", requestOptions)
+        fetch("/futbolito/jugadasAllDelete", requestOptions)
             .then(response => response.text())
             .then(result => { resolve(JSON.parse(result)); })
             .catch(error => console.log('error', error));
