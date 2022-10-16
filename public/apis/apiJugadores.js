@@ -5,7 +5,7 @@ export function api_get_AllJugadores() {
             redirect: 'follow'
         };
 
-        fetch("http://127.0.0.1:5050/futbolito/jugadoresGetAll", requestOptions)
+        fetch("http://ec2-18-216-42-40.us-east-2.compute.amazonaws.com:5050/futbolito/jugadoresGetAll", requestOptions)
             .then(response => response.text())
             .then(result => {
                 //let data = JSON.parse(result)
@@ -38,7 +38,7 @@ export function api_post_Jugadores(data) {
             redirect: 'follow'
         };
 
-        fetch("http://127.0.0.1:5050/futbolito/jugadorPost", requestOptions)
+        fetch("http://ec2-18-216-42-40.us-east-2.compute.amazonaws.com:5050/futbolito/jugadorPost", requestOptions)
             .then(response => response.text())
             .then(result => { resolve(JSON.parse(result)); })
             .catch(error => console.log('error', error));
@@ -68,7 +68,7 @@ export function api_put_Jugadores(data) {
             redirect: 'follow'
         };
 
-        fetch("http://127.0.0.1:5050/futbolito/jugadorUpdate", requestOptions)
+        fetch("http://ec2-18-216-42-40.us-east-2.compute.amazonaws.com:5050/futbolito/jugadorUpdate", requestOptions)
             .then(response => response.text())
             .then(result => { resolve(JSON.parse(result)); })
             .catch(error => console.log('error', error));

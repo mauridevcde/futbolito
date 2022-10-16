@@ -6,7 +6,7 @@ export function api_get_AllEquipos() {
       redirect: 'follow'
     };
 
-    fetch("http://127.0.0.1:5050/futbolito/equiposGetAll", requestOptions)
+    fetch("http://ec2-18-216-42-40.us-east-2.compute.amazonaws.com:5050/futbolito/equiposGetAll", requestOptions)
       .then(response => response.text())
       .then(result => {
         //let data = JSON.parse(result)
@@ -36,7 +36,7 @@ export function api_post_Equipos(data) {
       redirect: 'follow'
     }; 
 
-    fetch("http://127.0.0.1:5050/futbolito/equiposPost/", requestOptions)
+    fetch("http://ec2-18-216-42-40.us-east-2.compute.amazonaws.com:5050/futbolito/equiposPost/", requestOptions)
       .then(response => response.text())
       .then(result => { resolve(JSON.parse(result)); })
       .catch(error => console.log('error', error));
@@ -63,7 +63,7 @@ export function api_put_Equipo(data) {
           redirect: 'follow'
       };
 
-      fetch("http://127.0.0.1:5050/futbolito/equiposUpdate/", requestOptions)
+      fetch("http://ec2-18-216-42-40.us-east-2.compute.amazonaws.com:5050/futbolito/equiposUpdate/", requestOptions)
           .then(response => response.text())
           .then(result => { resolve(JSON.parse(result)); })
           .catch(error => console.log('error', error));

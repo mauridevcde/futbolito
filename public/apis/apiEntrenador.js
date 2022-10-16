@@ -5,7 +5,7 @@ export function api_get_AllEntrenador() {
       redirect: "follow",
     };
 
-    fetch("http://127.0.0.1:5050/futbolito/entrenadoresGetAll", requestOptions)
+    fetch("http://ec2-18-216-42-40.us-east-2.compute.amazonaws.com:5050/futbolito/entrenadoresGetAll", requestOptions)
       .then((response) => response.text())
       .then((result) => {
         //let data = JSON.parse(result)
@@ -37,7 +37,7 @@ export function api_post_Entrenador(data) {
       redirect: "follow",
     };
 
-    fetch("http://127.0.0.1:5050/futbolito/entrenadorPost", requestOptions)
+    fetch("http://ec2-18-216-42-40.us-east-2.compute.amazonaws.com:5050/futbolito/entrenadorPost", requestOptions)
       .then((response) => response.text())
       .then((result) => {
         resolve(JSON.parse(result));
@@ -69,7 +69,7 @@ export function api_put_Entrenador(data) {
       redirect: 'follow'
     };
 
-    fetch("http://127.0.0.1:5050/futbolito/entrenadorUpdate", requestOptions)
+    fetch("http://ec2-18-216-42-40.us-east-2.compute.amazonaws.com:5050/futbolito/entrenadorUpdate", requestOptions)
       .then(response => response.text())
       .then(result => { resolve(JSON.parse(result)); })
       .catch(error => console.log('error', error));
