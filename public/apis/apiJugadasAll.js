@@ -5,7 +5,7 @@ export function api_get_jugadasAll() {
             redirect: 'follow'
         };
 
-        fetch("htpp://ec2-3-144-74-245.us-east-2.compute.amazonaws.com:5050/futbolito/jugadasALLGet/", requestOptions)
+        fetch("http://ec2-3-144-74-245.us-east-2.compute.amazonaws.com:5050/futbolito/jugadasALLGet/", requestOptions)
             .then(response => response.text())
             .then(result => {
                 //let data = JSON.parse(result)
@@ -35,7 +35,7 @@ export function api_post_jugadasAll(data) {
             redirect: 'follow'
         };
 
-        fetch("htpp://ec2-3-144-74-245.us-east-2.compute.amazonaws.com:5050/futbolito/jugadasAllPost", requestOptions)
+        fetch("http://ec2-3-144-74-245.us-east-2.compute.amazonaws.com:5050/futbolito/jugadasAllPost", requestOptions)
             .then(response => response.text())
             .then(result => { resolve(JSON.parse(result)); })
             .catch(error => console.log('error', error));
